@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { keyframes, ThemeProvider } from 'styled-components'
-import {DarkTheme} from './Themes';
+import { DarkTheme } from './Themes';
 
 
 import LogoComponent from '../subComponents/LogoComponent';
@@ -34,7 +34,7 @@ img{
     height: auto;
 }
 `
-const Main =  styled.div`
+const Main = styled.div`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
   padding: 2rem;
@@ -61,31 +61,33 @@ const Main =  styled.div`
 const AboutPage = () => {
     return (
         <ThemeProvider theme={DarkTheme}>
-<Box>
+            <Box>
 
-<LogoComponent theme='dark'/>
-<SocialIcons theme='dark'/>
-<PowerButton />
-<ParticleComponent theme='dark' />
+                <LogoComponent theme='dark' />
+                <SocialIcons theme='dark' />
+                <PowerButton />
+                <ParticleComponent theme='dark' />
 
-        <Spaceman>
-            <img src={astronaut} alt="spaceman" />
-        </Spaceman>    
-        <Main>
-        I'm a front-end developer located in India. I love to create simple yet beautiful websites with great user experience.
-<br /> <br/>
-I'm interested in the whole frontend stack Like trying new things and building great projects. I'm an independent freelancer and blogger. I love to write blogs and read books.
-<br/> <br/>
-I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
-        </Main>
+                <Spaceman>
+                    <img src={astronaut} alt="spaceman" />
+                </Spaceman>
+                <Main>
+                I am passionate about robotics, AI, and ML—fields that revolutionize how we live and interact. These disciplines fuel my drive for innovation, merging algorithms and robotics to tackle real-world challenges.
 
-        <BigTitle text="ABOUT" top="10%" left="5%" />
+As an entrepreneur, I lead a tech startup pioneering advancements in AI and robotics. This journey has strengthened my ability to transform ambitious ideas into impactful solutions through innovation and collaboration.
+
+Leadership is at my core, whether in startups, research, or community initiatives. I strive to inspire, create opportunities, and drive technology for societal progress.
+
+Through higher education, I aim to refine my expertise, enhance my leadership, and contribute to the future of AI, ML, and robotics for a more sustainable world.
+                </Main>
+
+                <BigTitle text="ABOUT" top="10%" left="5%" />
 
 
-        </Box>
+            </Box>
 
         </ThemeProvider>
-        
+
     )
 }
 
