@@ -66,6 +66,23 @@ width: 100%;
 display: flex;
 justify-content: space-evenly;
 `
+const AWARDS = styled(NavLink)`
+  color: ${props => props.theme.text};
+  position: absolute;
+  top: 2rem;
+  left: calc(20rem + 2vw);
+  text-decoration: none;
+  z-index:1;
+`
+
+const MEDIA = styled(NavLink)`
+  color: ${props => props.theme.text};
+  position: absolute;
+  top: 2rem;
+  right: calc(20rem + 2vw);
+  text-decoration: none;
+  z-index:1;
+`
 
 const ABOUT = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
@@ -137,6 +154,8 @@ const Main = () => {
          <DarkDiv   click={click}/>
             <Container>
             <PowerButton />
+
+             
             <LogoComponent theme={click ? 'dark' :'light'}/>
             <SocialIcons theme={click ? 'dark' :'light'} />
            
@@ -145,7 +164,7 @@ const Main = () => {
                 <span>click here</span>
             </Center>
 
-            <Contact target="_blank" href="mailto:codebucks27@gmail.com">
+            <Contact target="_blank" href="mailto: mahadirislam4@gmail.com">
                 <motion.h2
                 initial={{
                     y:-200,
@@ -162,6 +181,32 @@ const Main = () => {
                     Say hi..
                 </motion.h2>
             </Contact>
+  {/*Required additional two menu */}
+
+  {/* New Awards Link */}
+  <AWARDS to="/awards">
+                    <motion.h2
+                        initial={{ y: -200, transition: { type:'spring', duration: 1.5, delay:1 } }}
+                        animate={{ y: 0, transition: { type:'spring', duration: 1.5, delay:1 } }}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
+                        Awards
+                    </motion.h2>
+                </AWARDS>
+
+                {/* New Media Link */}
+                <MEDIA to="/media">
+                    <motion.h2
+                        initial={{ y: -200, transition: { type:'spring', duration: 1.5, delay:1 } }}
+                        animate={{ y: 0, transition: { type:'spring', duration: 1.5, delay:1 } }}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
+                        Media
+                    </motion.h2>
+                </MEDIA>
+
             <BLOG to="/blog">
                 <motion.h2
                 initial={{
